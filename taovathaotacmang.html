@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="value" /> <button type="button" onclick="add()" id="add">Add</button>
+    <button type="button" onclick="display()" id="dpy">Display</button>
+    <div id="display"></div>
+    <script>
+        let arr = Array();
+        let a = 0;
+
+        function add() {
+            let element = document.getElementById('value').value;
+            arr[a] = element;
+            a++;
+            document.getElementById('value').value = "";
+        }
+
+        function display() {
+            let e = ""
+            let i = 0 ;
+            for (i = 0; i < arr.length; i ++) {
+                e = e + "</br>" + arr[i];
+                document.getElementById('display').innerHTML = e;
+                console.log(e)
+            }
+        }
+
+    </script>
+</body>
+</html>
